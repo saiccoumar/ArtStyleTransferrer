@@ -8,29 +8,48 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>ImageConverter</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        img{
+            padding-left: 12.5%;
+            padding-right: 12.5%;
+            width:75%;
+            height: 50%;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Convert Pictures to Art</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <h1 class="navbar-brand">  &nbsp;&nbsp; Convert Pictures to Art</h1>
+    </nav>
     <form method="post" enctype="multipart/form-data">
-    <!-- <form method="post" > -->
-    
-      <input type=file name=file accept="image/png, image/jpeg">
-      <div>
-          <br>
-          
-      </div>
-      <input type=submit value=Upload>
+        <!-- <form method="post" > -->
+        <div class="input-group mb-3">
+            <input class="form-control" type=file name=file accept="image/png, image/jpeg">
+            <div>
+                <br>
 
-        <!-- <input type="file" id="content" name="content" accept="image/png, image/jpeg"> -->
-        <!-- <input type="submit" value="Convert!"> -->
+            </div>
+
+            <input class="form-control" type=submit value=Upload onclick="clicked()">
+
+            <!-- <input type="file" id="content" name="content" accept="image/png, image/jpeg"> -->
+            <!-- <input type="submit" value="Convert!"> -->
+        </div>
+        <img src = "../static/img/IMG_0381.jpg">
     </form>
+
+    <script type="text/javascript">
+        function clicked() {
+           alert("This might take a second.....sit tight and don't click anything!")
+        }
     
-    <script src="" async defer></script>
+    </script>
 
 </body>
 

@@ -140,10 +140,13 @@ def upload_file():
         for r in artistList:
           convert(("uploads/"+filename),r)
           print(r+" converted")
+        for f in os.listdir('uploads'):
+          os.remove(os.path.join('uploads', f))
         return render_template("images.html")
   return render_template("index.html")
 
-convert("selfie.jpg","banksy")
+# converts one file to banksy
+# convert("selfie.jpg","banksy")
   
 
 # check to see if this is the main thread of execution
